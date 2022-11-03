@@ -96,7 +96,7 @@ In both cases, `{name}` is derived from your `package.json` file.
 
 The relative path of either a single card image (350 x 155 pixels) under your _source_ directory, or to a directory of images that will be used by the launcher. You may optionally specify an object with a `"default"` key for releases of your game, and other keys that denote pre-releases. Default: None.
 
-e.g. A static image for `beta` pre-releases
+e.g. A static image for `beta` pre-releases; a directory for other releases.
 
 ```json
 {
