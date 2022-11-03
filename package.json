@@ -14,6 +14,9 @@
 		"/bin",
 		"/lib"
 	],
+	"publishConfig": {
+		"access": "public"
+	},
 	"dependencies": {
 		"cross-spawn": "^7.0.3",
 		"del": "^7.0.0",
