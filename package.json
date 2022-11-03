@@ -10,6 +10,10 @@
 	"scripts": {
 		"release": "release-it"
 	},
+	"files": [
+		"/bin",
+		"/lib"
+	],
 	"dependencies": {
 		"cross-spawn": "^7.0.3",
 		"del": "^7.0.0",
