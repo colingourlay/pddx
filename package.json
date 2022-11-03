@@ -1,9 +1,10 @@
 {
-	"name": "pdx",
+	"name": "pddx",
 	"version": "1.0.0-pre",
 	"description": "A toolkit for developing Playdate games, for those who prefer the Node.js ecosystem",
 	"bin": {
-		"pdx": "bin/pdx.mjs"
+		"pd": "bin/playdate.mjs",
+		"playdate": "bin/playdate.mjs"
 	},
 	"author": "Colin Gourlay <colin@colin-gourlay.com>",
 	"license": "ISC",

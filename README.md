@@ -1,16 +1,16 @@
-# pdx - Playdate Developer Experience
+# pddx - Playdate Developer Experience
 
 A toolkit for developing Playdate games, for those who prefer the Node.js ecosystem
 
 ## Installation
 
 ```sh
-npm install pdx
+npm install pddx
 ```
 
 ## Usage
 
-### `pdx build`
+### `pd build`
 
 Generates a `pdxinfo` file in your _source_ directory (default: `"src"`), then uses the Playdate compiler (`pdc`) to build a `{name}-dev.pdx` in your _out_ directory (default: `"dist"`)
 
@@ -27,27 +27,27 @@ pdxinfo
 *.pdx
 ```
 
-### `pdx preview`
+### `pd preview`
 
 Opens your built `{name}-dev.pdx` file with the OS' default program (which should be the Playdate Simulator)
 
 When `NODE_ENV=production`, `{name}-{version}.pdx` will be opened instead.
 
-### `pdx dev`
+### `pd dev`
 
 Runs your project's `build` and `preview` tasks in sequence, then watches your _source_ directory, running those tasks again whenever files change.
 
-### `pdx clean`
+### `pd clean`
 
 Removes all generated files & directories (your _out_ directory and the `pdxinfo` file in your _source_ directory).
 
 ## Configuration
 
-Configuration options can be set by either creating a `pdx.json` file in the root of your project, or by adding a `"pdx"` property to your `package.json`:
+Configuration options can be set by either creating a `pddx.json` file in the root of your project, or by adding a `"pddx"` property to your `package.json`:
 
 ### Options
 
-#### `info`
+#### `pdxinfo`
 
 An object containing options used during the creation of the `pdxinfo` file in your _source_ directory. Options are descibed in the next section. Default: `{}`.
 
@@ -67,7 +67,7 @@ Name of your `package.json` scripts 'build' task (called by the `dev` command). 
 
 Name of your `package.json` scripts 'preview' task (called by the `dev` command). Default: `"preview"`.
 
-### `info` options
+### `pdxinfo` options
 
 Unless specified, all values are strings. All are optional.
 
@@ -121,12 +121,10 @@ A second content warning that displays on a second screen when the user launches
 
 ```json
 {
-	"start": "npm run dev",
-	"dev": "pdx dev",
-	"clean": "pdx clean",
-	"build": "pdx build",
-	"build:release": "NODE_ENV=production pdx build",
-	"preview": "pdx preview",
-	"preview:release": "NODE_ENV=production pdx preview"
+	"start": "pd dev",
+	"build": "pd",
+	"preview": "pd preview",
+	"build:release": "NODE_ENV=production pd",
+	"preview:release": "NODE_ENV=production pd preview"
 }
 ```
