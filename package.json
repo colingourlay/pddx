@@ -7,6 +7,9 @@
 	},
 	"author": "Colin Gourlay <colin@colin-gourlay.com>",
 	"license": "ISC",
+	"scripts": {
+		"release": "release-it"
+	},
 	"dependencies": {
 		"cross-spawn": "^7.0.3",
 		"del": "^7.0.0",
@@ -17,5 +20,8 @@
 		"pkg-dir": "^7.0.0",
 		"read-pkg": "^7.1.0",
 		"semver": "^7.3.8"
+	},
+	"devDependencies": {
+		"release-it": "^15.5.0"
 	}
 }
