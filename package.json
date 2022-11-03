@@ -1,0 +1,21 @@
+{
+	"name": "pdx",
+	"version": "1.0.0-pre",
+	"description": "A toolkit for developing Playdate games, for those who prefer the Node.js ecosystem",
+	"bin": {
+		"pdx": "bin/pdx.mjs"
+	},
+	"author": "Colin Gourlay <colin@colin-gourlay.com>",
+	"license": "ISC",
+	"dependencies": {
+		"cross-spawn": "^7.0.3",
+		"del": "^7.0.0",
+		"load-json-file": "^7.0.1",
+		"make-dir": "^3.1.0",
+		"npm-run-all": "^4.1.5",
+		"onchange": "^7.1.0",
+		"pkg-dir": "^7.0.0",
+		"read-pkg": "^7.1.0",
+		"semver": "^7.3.8"
+	}
+}
