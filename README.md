@@ -43,7 +43,7 @@ Removes all generated files & directories (your _out_ directory and the `pdxinfo
 
 ## Configuration
 
-Configuration options can be set by either creating a `pddx.json` file in the root of your project, or by adding a `"pddx"` property to your `package.json`:
+Configuration options can be set by either creating a `playdate.json` file in the root of your project, or by adding a `"playdate"` property to your `package.json`:
 
 ### Options
 
