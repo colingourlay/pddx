@@ -1,6 +1,6 @@
 {
 	"name": "pddx",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "A toolkit for developing Playdate games, for those who prefer the Node.js ecosystem",
 	"bin": {
 		"pd": "bin/playdate.mjs",
