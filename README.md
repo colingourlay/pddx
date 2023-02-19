@@ -7,7 +7,7 @@ A toolkit for developing Playdate games, for those who prefer the Node.js ecosys
 `pddx` is baked into the [Playdate project template](https://github.com/colingourlay/create-playdate) on **npm**. To create a new project, run:
 
 ```sh
-npm init playdate
+npm create playdate
 ```
 
 ...and follow the command line instructions.
