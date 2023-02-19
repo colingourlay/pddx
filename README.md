@@ -55,6 +55,19 @@ Removes all generated files & directories (your _out_ directory and the `pdxinfo
 
 Configuration options can be set by either creating a `playdate.json` file in the root of your project, or by adding a `"playdate"` property to your `package.json`:
 
+### Example
+
+This `playdate.json` file will define the name of the game for the `pdxinfo` file, and specify that the game's source directory is called `Source` (instead of `src`):
+
+```json
+{
+	"pdxinfo": {
+		"name": "My Playdate Game"
+	},
+	"sourceDir": "Source"
+}
+```
+
 ### Options
 
 #### `pdxinfo`
