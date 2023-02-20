@@ -2,7 +2,17 @@
 
 A toolkit for developing Playdate games, for those who prefer the Node.js ecosystem
 
-## Installation
+## Quick Start
+
+`pddx` is baked into the [Playdate project template](https://github.com/colingourlay/create-playdate) on **npm**. To create a new project, run:
+
+```sh
+npm create playdate
+```
+
+...and follow the command line instructions.
+
+## Installation (for existing projects)
 
 ```sh
 npm install pddx
@@ -10,7 +20,7 @@ npm install pddx
 
 ## Usage
 
-### `pd build`
+### `pd build` (or `pd`)
 
 Generates a `pdxinfo` file in your _source_ directory (default: `"src"`), then uses the Playdate compiler (`pdc`) to build a `{name}-dev.pdx` in your _out_ directory (default: `"dist"`)
 
@@ -44,6 +54,19 @@ Removes all generated files & directories (your _out_ directory and the `pdxinfo
 ## Configuration
 
 Configuration options can be set by either creating a `playdate.json` file in the root of your project, or by adding a `"playdate"` property to your `package.json`:
+
+### Example
+
+This `playdate.json` file will define the name of the game for the `pdxinfo` file, and specify that the game's source directory is called `Source` (instead of `src`):
+
+```json
+{
+	"pdxinfo": {
+		"name": "My Playdate Game"
+	},
+	"sourceDir": "Source"
+}
+```
 
 ### Options
 
