@@ -87,8 +87,12 @@ The author of your game. Either a name, or a name parsed from a person string (m
 
 Your game's unique bundleID, in reverse DNS notation. Default:
 
-1. If a person (see `author`, above) with an email address is found in `package.json`, `"{niamod}.{name}"`, where `{niamod}` is the reversed domain name the person's email address. Otherwise,
-2. `"com.example.{name}"`
+1. If a person (see `author`, above) is found in `package.json`:
+
+   - `"{niamod}.{name}"`, where `{niamod}` is the reversed domain of their email address if they have one, or
+   - `"com.{author}.{name}"`, where `{author}` is a lower-case concatenation of their name.
+
+2. Otherwise: `"com.example.{name}"`
 
 In both cases, `{name}` is derived from your `package.json` file.
 
