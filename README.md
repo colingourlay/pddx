@@ -22,7 +22,7 @@ npm install pddx
 
 ### `pd build` (or `pd`)
 
-Generates a `pdxinfo` file in your _source_ directory (default: `"src"`), then uses the Playdate compiler (`pdc`) to build a `{name}-dev.pdx` in your _out_ directory (default: `"dist"`)
+Generates a `pdxinfo` file in your _source_ directory (default: `"source"`), then uses the Playdate compiler (`pdc`) to build a `{name}-dev.pdx` in your _out_ directory (default: `"dist"`)
 
 When `NODE_ENV=production`, the Playdate compiler will have verbose output the output file will be named `{name}-{version}.pdx`.
 
@@ -57,14 +57,14 @@ Configuration options can be set by either creating a `playdate.json` file in th
 
 ### Example
 
-This `playdate.json` file will define the name of the game for the `pdxinfo` file, and specify that the game's source directory is called `Source` (instead of `src`):
+This `playdate.json` file will define the name of the game for the `pdxinfo` file, and specify that the game's output directory is called `games` (instead of `dist`):
 
 ```json
 {
 	"pdxinfo": {
 		"name": "My Playdate Game"
 	},
-	"sourceDir": "Source"
+	"outputDir": "games"
 }
 ```
 
@@ -76,7 +76,7 @@ An object containing options used during the creation of the `pdxinfo` file in y
 
 #### `sourceDir`
 
-Name of the directory under your project root where your game's source is kept. Default: `"src"`.
+Name of the directory under your project root where your game's source is kept. Default: `"source"`.
 
 #### `outputDir`
 
