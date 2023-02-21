@@ -1,18 +1,17 @@
 {
 	"name": "pddx",
-	"version": "1.0.3",
+	"version": "2.0.0",
 	"description": "A toolkit for developing Playdate games, for those who prefer the Node.js ecosystem",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/colingourlay/pddx"
 	},
-	"license": "MIT",
+	"license": "ISC",
 	"bin": {
 		"pd": "bin/playdate.mjs",
 		"playdate": "bin/playdate.mjs"
 	},
 	"author": "Colin Gourlay <colin@colin-gourlay.com>",
-	"license": "ISC",
 	"scripts": {
 		"release": "release-it"
 	},
