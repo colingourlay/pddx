@@ -26,7 +26,7 @@ npm install pddx
 
 ### `pd build` (or `pd`)
 
-Generates a `pdxinfo` file in your _source_ directory (default: `"source"`), then uses the Playdate compiler (`pdc`) to build a `{name}-dev.pdx` in your _out_ directory (default: `"dist"`)
+Generates a `pdxinfo` file in your _source_ directory (default: `"source"`), then uses the Playdate compiler (`pdc`) to build a `{name}-dev.pdx` in your _output_ directory (default: `"dist"`)
 
 When `NODE_ENV=production`, the Playdate compiler will have verbose output the output file will be named `{name}-{version}.pdx`.
 
@@ -53,7 +53,7 @@ Runs your project's `build` and `preview` tasks in sequence, then watches your _
 
 ### `pd clean`
 
-Removes all generated files & directories (your _out_ directory and the `pdxinfo` file in your _source_ directory).
+Removes all files & directories created during the build process (your _output_ directory and the `pdxinfo` file in your _source_ directory).
 
 ## Configuration
 
