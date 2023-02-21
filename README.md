@@ -4,7 +4,7 @@ A toolkit for developing Playdate games, for those who prefer the Node.js ecosys
 
 ## Quick Start
 
-`pddx` is baked into the [Playdate project template](https://github.com/colingourlay/create-playdate) on **npm**. To create a new project, run:
+`pddx` is included with the [Playdate project template](https://github.com/colingourlay/create-playdate) on **npm**. To create a new project, run:
 
 ```sh
 npm create playdate
@@ -17,6 +17,10 @@ npm create playdate
 ```sh
 npm install pddx
 ```
+
+## Requirements
+
+**pddx** assumes that you've already set the `PLAYDATE_SDK_PATH` environment variable, and added the SDK's `bin` directory to your `PATH` environment variable. If you need help with that, Panic has [instructions](https://sdk.play.date/1.13.0/Inside%20Playdate.html#_set_playdate_sdk_path_environment_variable) in their SDK documentation.
 
 ## Usage
 
