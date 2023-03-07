@@ -24,7 +24,20 @@ npm install pddx
 
 ## Usage
 
-### `pd build` (or `pd`)
+Commands:
+
+- [`pd build` / `pd`](#pd-build)
+- [`pd simulate`](#pd-simulate)
+- [`pd dev`](#pd-dev)
+- [`pd install`](#pd-install)
+- [`pd launch`](#pd-launch)
+- [`pd install-and-launch`](#pd-install-and-launch)
+- [`pd dev-with-device`](#pd-dev-with-device)
+- [`pd clean`](#pd-clean)
+
+### `pd build`
+
+Alias: `pd`
 
 Generates a `pdxinfo` file in your _source_ directory (default: `"source"`), then uses the Playdate compiler (`pdc`) to build a `{name}-dev.pdx` in your _output_ directory (default: `"dist"`)
 
@@ -41,7 +54,7 @@ pdxinfo
 *.pdx
 ```
 
-### `pd preview`
+### `pd simulate`
 
 Opens your built `{name}-dev.pdx` file with the OS' default program (which should be the Playdate Simulator)
 
@@ -49,7 +62,29 @@ When `NODE_ENV=production`, `{name}-{version}.pdx` will be opened instead.
 
 ### `pd dev`
 
-Runs your project's `build` and `preview` tasks in sequence, then watches your _source_ directory, running those tasks again whenever files change.
+Runs your project's `build` and `simulate` tasks in sequence, then watches your _source_ directory, running those tasks again whenever files change.
+
+### `pd install`
+
+Installs your built `{name}-dev.pdx` to your connected Playdate.
+
+When `NODE_ENV=production`, `{name}-{version}.pdx` will be installed instead.
+
+### `pd launch`
+
+Launches the `{name}-dev.pdx` file on your connected Playdate, if it was previously installed with `pd install`
+
+When `NODE_ENV=production`, `{name}-{version}.pdx` will be run instead.
+
+### `pd install-and-launch`
+
+Installs your built `{name}-dev.pdx` to your connected Playdate, then launches it.
+
+When `NODE_ENV=production`, `{name}-{version}.pdx` will be installed and launched instead.
+
+### `pd dev-with-device`
+
+Runs your project's `build` and `install-and-launch` tasks in sequence, then watches your _source_ directory, running those tasks again whenever files change.
 
 ### `pd clean`
 
@@ -90,9 +125,9 @@ Name of the directory under your project root where `.pdx` builds will be create
 
 Name of your `package.json` scripts 'build' task (called by the `dev` command). Default: `"build"`.
 
-#### `previewTask`
+#### `simulateTask`
 
-Name of your `package.json` scripts 'preview' task (called by the `dev` command). Default: `"preview"`.
+Name of your `package.json` scripts 'simulate' task (called by the `dev` command). Default: `"simulate"`.
 
 ### `pdxinfo` options
 
@@ -154,8 +189,8 @@ A second content warning that displays on a second screen when the user launches
 {
 	"start": "pd dev",
 	"build": "pd",
-	"preview": "pd preview",
 	"build:release": "NODE_ENV=production pd",
-	"preview:release": "NODE_ENV=production pd preview"
+	"simulate": "pd simulate",
+	"simulate:release": "NODE_ENV=production pd simulate"
 }
 ```
