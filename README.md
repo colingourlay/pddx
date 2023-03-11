@@ -109,10 +109,6 @@ This `playdate.json` file will define the name of the game for the `pdxinfo` fil
 
 ### Options
 
-#### `pdxinfo`
-
-An object containing options used during the creation of the `pdxinfo` file in your _source_ directory. Options are descibed in the next section. Default: `{}`.
-
 #### `sourceDir`
 
 Name of the directory under your project root where your game's source is kept. Default: `"source"`.
@@ -121,13 +117,9 @@ Name of the directory under your project root where your game's source is kept. 
 
 Name of the directory under your project root where `.pdx` builds will be created. Default: `"dist"`.
 
-#### `buildTask`
+#### `pdxinfo`
 
-Name of your `package.json` scripts 'build' task (called by the `dev` command). Default: `"build"`.
-
-#### `simulateTask`
-
-Name of your `package.json` scripts 'simulate' task (called by the `dev` command). Default: `"simulate"`.
+An object containing options used during the creation of the `pdxinfo` file in your _source_ directory. Options are descibed in the next section. Default: `{}`.
 
 ### `pdxinfo` options
 
