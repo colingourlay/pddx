@@ -2,8 +2,12 @@
 
 const [command] = process.argv.slice(2);
 
+let commandModule;
+
 try {
-	import(`../lib/commands/${command || "build"}.mjs`);
+	commandModule = await import(`../lib/commands/${command || "build"}.mjs`);
 } catch (e) {
 	console.error("Command not recognized");
 }
+
+commandModule.default();
