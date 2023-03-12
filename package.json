@@ -1,6 +1,6 @@
 {
 	"name": "pddx",
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"description": "A toolkit for developing Playdate games, for those who prefer the Node.js ecosystem",
 	"repository": {
 		"type": "git",
