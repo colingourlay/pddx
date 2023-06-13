@@ -152,14 +152,14 @@ In both cases, `{name}` is derived from your `package.json` file.
 
 #### `imagePath`
 
-The relative path of either a single card image (350 x 155 pixels) under your _source_ directory, or to a directory of images that will be used by the launcher. You may optionally specify an object with a `"default"` key for releases of your game, and other keys that denote pre-releases. Default: None.
+The relative path of a directory under your _source_ directory that will contain files used by the launcher (see **pdxinfo > imagePath** in the [SDK documentation]https://sdk.play.date/inside-playdate/#pdxinfo) for content requirements). You may optionally specify an object with a `"default"` key for releases of your game, and other keys that denote pre-releases. Default: None.
 
-e.g. A static image for `beta` pre-releases; a directory for other releases.
+e.g. Use `launcher/beta` directory for **beta** pre-releases; use `launcher` directory for other releases.
 
 ```json
 {
 	"default": "launcher",
-	"beta": "launcher/card-beta.png"
+	"beta": "launcher/beta"
 }
 ```
 
