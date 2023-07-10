@@ -10,15 +10,15 @@ const ALIASES = {
 	l: "launch",
 	s: "simulate",
 };
+const COMMANDS = new Set(Object.values(ALIASES));
 
-const [commandOrAlias] = process.argv.slice(2) || "build";
+const args = process.argv.slice(2);
+const commandOrAlias = args[0] ?? "build";
 const command = ALIASES[commandOrAlias] || commandOrAlias;
-let commandModule;
 
-try {
-	commandModule = await import(`../lib/commands/${command}.mjs`);
-} catch (e) {
-	console.error("Command not recognized");
+if (!COMMANDS.has(command)) {
+	console.error(`Command "${command}" not recognized`);
+	process.exit(1);
 }
 
-commandModule.default();
+(await import(`../lib/commands/${command}.mjs`)).default();
