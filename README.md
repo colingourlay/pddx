@@ -29,11 +29,15 @@ Commands:
 - [`pd build` / `pd`](#pd-build)
 - [`pd simulate`](#pd-simulate)
 - [`pd dev`](#pd-dev)
+- [`pd clean`](#pd-clean)
+
+Windows-only commands:
+
 - [`pd install`](#pd-install)
 - [`pd launch`](#pd-launch)
 - [`pd install-and-launch`](#pd-install-and-launch)
 - [`pd dev-with-device`](#pd-dev-with-device)
-- [`pd clean`](#pd-clean)
+
 
 ### `pd build`
 
@@ -64,25 +68,25 @@ When `NODE_ENV=production`, `{name}-{version}.pdx` will be opened instead.
 
 Runs your project's `build` and `simulate` tasks in sequence, then watches your _source_ directory, running those tasks again whenever files change.
 
-### `pd install`
+### `pd install` (Windows-only)
 
 Installs your built `{name}-dev.pdx` to your connected Playdate.
 
 When `NODE_ENV=production`, `{name}-{version}.pdx` will be installed instead.
 
-### `pd launch`
+### `pd launch` (Windows-only)
 
 Launches the `{name}-dev.pdx` file on your connected Playdate, if it was previously installed with `pd install`
 
 When `NODE_ENV=production`, `{name}-{version}.pdx` will be run instead.
 
-### `pd install-and-launch`
+### `pd install-and-launch` (Windows-only)
 
 Installs your built `{name}-dev.pdx` to your connected Playdate, then launches it.
 
 When `NODE_ENV=production`, `{name}-{version}.pdx` will be installed and launched instead.
 
-### `pd dev-with-device`
+### `pd dev-with-device` (Windows-only)
 
 Runs your project's `build` and `install-and-launch` tasks in sequence, then watches your _source_ directory, running those tasks again whenever files change.
 
