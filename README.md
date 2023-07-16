@@ -26,18 +26,17 @@ npm install pddx
 
 Commands:
 
-- [`pd build` / `pd`](#pd-build)
+- [`pd build`](#pd-build)
 - [`pd simulate`](#pd-simulate)
 - [`pd dev`](#pd-dev)
 - [`pd clean`](#pd-clean)
 
-Windows-only commands:
+If you're developing on Windows, you also have access to these commands:
 
 - [`pd install`](#pd-install)
 - [`pd launch`](#pd-launch)
 - [`pd install-and-launch`](#pd-install-and-launch)
 - [`pd dev-with-device`](#pd-dev-with-device)
-
 
 ### `pd build`
 
@@ -68,31 +67,31 @@ When `NODE_ENV=production`, `{name}-{version}.pdx` will be opened instead.
 
 Runs your project's `build` and `simulate` tasks in sequence, then watches your _source_ directory, running those tasks again whenever files change.
 
-### `pd install` (Windows-only)
+### `pd clean`
 
-Installs your built `{name}-dev.pdx` to your connected Playdate.
+Removes all files & directories created during the build process (your _output_ directory and the `pdxinfo` file in your _source_ directory).
+
+### `pd install`
+
+Installs your built `{name}-dev.pdx` to your connected Playdate. (Windows-only)
 
 When `NODE_ENV=production`, `{name}-{version}.pdx` will be installed instead.
 
-### `pd launch` (Windows-only)
+### `pd launch`
 
 Launches the `{name}-dev.pdx` file on your connected Playdate, if it was previously installed with `pd install`
 
 When `NODE_ENV=production`, `{name}-{version}.pdx` will be run instead.
 
-### `pd install-and-launch` (Windows-only)
+### `pd install-and-launch`
 
-Installs your built `{name}-dev.pdx` to your connected Playdate, then launches it.
+Installs your built `{name}-dev.pdx` to your connected Playdate, then launches it. (Windows-only)
 
 When `NODE_ENV=production`, `{name}-{version}.pdx` will be installed and launched instead.
 
-### `pd dev-with-device` (Windows-only)
+### `pd dev-with-device`
 
-Runs your project's `build` and `install-and-launch` tasks in sequence, then watches your _source_ directory, running those tasks again whenever files change.
-
-### `pd clean`
-
-Removes all files & directories created during the build process (your _output_ directory and the `pdxinfo` file in your _source_ directory).
+Runs your project's `build` and `install-and-launch` tasks in sequence, then watches your _source_ directory, running those tasks again whenever files change. (Windows-only)
 
 ## Configuration
 
