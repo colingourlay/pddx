@@ -42,9 +42,9 @@ If you're developing on Windows, you also have access to these commands:
 
 Alias: `pd`
 
-Generates a `pdxinfo` file in your _source_ directory (default: `"source"`), then uses the Playdate compiler (`pdc`) to build a `{name}-dev.pdx` in your _output_ directory (default: `"dist"`)
+Generates a `pdxinfo` file in your _source_ directory (default: `"source"`), then uses the Playdate compiler (`pdc`) to build a `{name}-dev.pdx` in your _output_ directory (default: `"dist"`).
 
-When `NODE_ENV=production`, the Playdate compiler will have verbose output the output file will be named `{name}-{version}.pdx`.
+When `NODE_ENV=production`, the Playdate compiler will have verbose output, and the output file will be named `{name}-{version}.pdx`.
 
 #### Notes
 
@@ -59,13 +59,13 @@ pdxinfo
 
 ### `pd simulate`
 
-Opens your built `{name}-dev.pdx` file with the OS' default program (which should be the Playdate Simulator)
+Opens your built `{name}-dev.pdx` file with the Playdate Simulator.
 
 When `NODE_ENV=production`, `{name}-{version}.pdx` will be opened instead.
 
 ### `pd dev`
 
-Runs your project's `build` and `simulate` tasks in sequence, then watches your _source_ directory, running those tasks again whenever files change.
+Runs the `build` and `simulate` tasks in sequence, then watches your _source_ directory, running those tasks again whenever files change.
 
 ### `pd clean`
 
@@ -79,7 +79,7 @@ When `NODE_ENV=production`, `{name}-{version}.pdx` will be installed instead.
 
 ### `pd launch`
 
-Launches the `{name}-dev.pdx` file on your connected Playdate, if it was previously installed with `pd install`
+Launches the `{name}-dev.pdx` file on your connected Playdate, if it was previously installed with `pd install`. (Windows-only)
 
 When `NODE_ENV=production`, `{name}-{version}.pdx` will be run instead.
 
@@ -95,7 +95,7 @@ Runs your project's `build` and `install-and-launch` tasks in sequence, then wat
 
 ## Configuration
 
-Configuration options can be set by either creating a `playdate.json` file in the root of your project, or by adding a `"playdate"` property to your `package.json`:
+Configuration options can be set by either creating a `playdate.json` file in the root of your project, or by adding a `"playdate"` property to your `package.json`.
 
 ### Example
 
